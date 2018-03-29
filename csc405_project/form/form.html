@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    OFFICIAL BALLON DO'R VOTING PORTAL
+    <em>The best soccer player on earth</em>
+    <link rel="stylesheet" href="form.css">
+</head>
+<hr></hr>
+
+<body>
+    <script>
+        function callLeague() {
+            var elems = document.getElementsByClassName("stadium");
+            for (var i = 0; i < elems.length; i++) {
+                elems[i].style.display = "none";
+            }
+            switch (document.getElementById("worldleagues").value) {
+                case "epl":
+                    document.getElementById("eplteams").style.display = "block";
+                    break;
+                case "laliga":
+                    document.getElementById("laligateams").style.display = "block";
+                    break;
+                case "seriea":
+                    document.getElementById("serieateams").style.display = "block";
+                    break;
+                case "ligue1":
+\                    document.getElementById("ligue1teams").style.display = "block";
+                    break;
+                case "bundesliga":
+                    document.getElementById("bundesligateams").style.display = "block";
+                    break;
+            }
+        }
+        function callEpl() {
+            var elems = document.getElementsByClassName("stadium");
+            for (var i = 0; i < elems.length; i++) {
+
+                elems[i].style.display = "none";
+            }
+            switch (document.getElementById("eplteams").value) {
+
+                case "liverpool":
+                    document.getElementById("eplteams").style.display = "block"; document.getElementById("liverpoolplayers").style.display = "block";
+                    break;
+                case "arsenal":
+                    document.getElementById("eplteams").style.display = "block"; document.getElementById("arsenalplayers").style.display = "block";
+                    break;
+                case "chelsea":
+                    document.getElementById("eplteams").style.display = "block"; document.getElementById("chelseaplayers").style.display = "block";
+                    break;
+                case "manchesterunited":
+                    document.getElementById("eplteams").style.display = "block"; document.getElementById("manunitedplayers").style.display = "block";
+                    break;
+
+                case "manchestercity":
+                    document.getElementById("eplteams").style.display = "block"; document.getElementById("mancityplayers").style.display = "block";
+                    break;
+            }
+        }
+        function callLaliga() {
+            var elems = document.getElementsByClassName("stadium");
+            for (var i = 0; i < elems.length; i++) {
+
+                elems[i].style.display = "none";
+            }
+            switch (document.getElementById("laligateams").value) {
+                case "realmadrid":
+                document.getElementById("laligateams").style.display = "block"; document.getElementById("realmadridplayers").style.display = "block";
+                    break;
+                case "barcelona":
+                document.getElementById("laligateams").style.display = "block"; document.getElementById("barcelonaplayers").style.display = "block";
+                    break;
+            }
+        }
+        function callSerieA() {
+            var elems = document.getElementsByClassName("stadium");
+            for (var i = 0; i < elems.length; i++) {
+
+                elems[i].style.display = "none";
+            }
+            switch (document.getElementById("serieateams").value) {
+                case "juventus":
+                document.getElementById("serieateams").style.display = "block"; document.getElementById("juventusplayers").style.display = "block";
+                    break;
+            }
+        }
+        function callLigue1() {
+            var elems = document.getElementsByClassName("stadium");
+            for (var i = 0; i < elems.length; i++) {
+
+                elems[i].style.display = "none";
+            }
+            switch (document.getElementById("ligue1teams").value) {
+                case "psg":
+                document.getElementById("ligue1teams").style.display = "block"; document.getElementById("psgplayers").style.display = "block";
+                    break;
+            }
+        }
+        function callBundesliga() {
+            var elems = document.getElementsByClassName("stadium");
+            for (var i = 0; i < elems.length; i++) {
+
+                elems[i].style.display = "none";
+            }
+            switch (document.getElementById("bundesligateams").value) {
+                case "bayernmunich":
+                document.getElementById("bundesligateams").style.display = "block"; document.getElementById("bayernmunichplayers").style.display = "block";
+                    break;
+            }
+        }
+
+    </script>
+     <p>emma is a big fool</p>
+     <select id="worldleagues">
+        <option value="leagueselect">SELECT YOUR LEAGUE</option>
+        <option value="epl" onclick="callLeague()">EPL(England)</option>
+        <option value="laliga" onclick="callLeague()">LA LIGA(Spain)</option>
+        <option value="seriea" onclick="callLeague()">SERIE A (Italy)</option>
+        <option value="ligue1" onclick="callLeague()">LIGUE ONE(France)</option>
+        <option value="bundesliga" onclick="callLeague()">BUNDESLIGA(Germany)</option>
+    </select>
+
+    <hr></hr>
+<hr></hr>
+    <!--ALL LEAGUES-->
+
+    <select id="eplteams" style="display:none" class="stadium">
+        <option value="teamselect">SELECT YOUR TEAM</option>
+        <option value="arsenal" onclick="callEpl()">Arsenal</option>
+        <option value="chelsea" onclick="callEpl()">Chelsea</option>
+        <option value="liverpool" onclick="callEpl()">Liverpool</option>
+        <option value="manchestercity" onclick="callEpl()">Manchester City</option>
+        <option value="manchesterunited" onclick="callEpl()">Manchester United</option>
+    </select>
+
+    <select id="laligateams" style="display:none" class="stadium">
+        <option value="teamselect">SELECT YOUR TEAM</option>
+        <option value="realmadrid" onclick="callLaliga()">Real Madrid</option>
+        <option value="barcelona" onclick="callLaliga()"> Barcelona</option>
+    </select>
+
+
+    <select id="serieateams" style="display:none" class="stadium">
+        <option value="teamselect">SELECT YOUR TEAM</option>
+        <option value="juventus" onclick="callSerieA()">Juventus</option>
+    </select>
+
+    <select id="ligue1teams" style="display:none" class="stadium">
+        <option value="teamselect">SELECT YOUR TEAM</option>
+        <option value="psg" onclick="callLigue1()">Paris St Germain</option>
+    </select>
+
+    <select id="bundesligateams" style="display:none" class="stadium">
+        <option value="teamselect">SELECT YOUR TEAM</option>
+        <option value="bayernmunich" onclick="callBundesliga()">Bayernmunich</option>
+
+    </select>
+    <!--EPL TEAMS PLAYERS-->
+
+    <select id="liverpoolplayers" class="stadium" style="display:none">
+        <option value="teamselect">VOTE YOUR BEST LIVERPOOL FIRST TEAM PLAYER</option>
+        <option value="salah">salah</option>
+        <option value="firmino">firmino</option>
+        <option value="mane">mane</option>
+    </select>
+
+    <select id="arsenalplayers" class="stadium" style="display:none">
+        <option value="teamselect">VOTE YOUR BEST ARSENAL FIRST TEAM PLAYER</option>
+        <option value="mkytaryan">mkytaryan</option>
+        <option value="ozil">ozil</option>
+        <option value="aubameyang">aubamayang</option>
+    </select>
+    <select id="chelseaplayers" class="stadium" style="display:none">
+        <option value="teamselect">VOTE YOUR BEST CHELSEA FIRST TEAM PLAYER</option>
+        <option value="hazard">hazard</option>
+        <option value="willian">willian</option>
+        <option value="kante">kante</option>
+    </select>
+    <select id="manunitedplayers" class="stadium" style="display:none">
+        <option value="teamselect">VOTE YOUR BEST MANCHESTER UNITED FIRST TEAM PLAYER</option>
+        <option value="pogba">pogba</option>
+        <option value="lukaku">lukaku</option>
+        <option value="degea">de gea</option>
+    </select>
+    <select id="mancityplayers" class="stadium" style="display:none">
+        <option value="teamselect">VOTE YOUR BEST MANCHESTER CITY FIRST TEAM PLAYER</option>
+        <option value="aguero">aguero</option>
+        <option value="debruyne">debruyne</option>
+        <option value="sterling">sterling</option>
+    </select>
+    <!--LALIGA TEAMS PLAYERS-->
+
+    <select id="realmadridplayers" class="stadium" style="display:none">
+        <option value="teamselect">VOTE YOUR BEST REAL MADRID FIRST TEAM PLAYER</option>
+        <option value="ronaldo"> Cristiano Ronaldo</option>
+        <option value="bale"> Gareth Bale</option>
+        <option value="Modric">Luka Modric</option>
+    </select>
+
+    <select id="barcelonaplayers" class="stadium" style="display:none">
+        <option value="teamselect">VOTE YOUR BEST BARCELONA FIRST TEAM PLAYER</option>
+        <option value="messi"> Lionel Messi</option>
+        <option value="suarez"> Luis Suarez</option>
+        <option value="coutinho">Phillipe Coutinho</option>
+    </select>
+
+    <!--ligue1 TEAMS PLAYERS-->
+    <select id="psgplayers" class="stadium" style="display:none">
+        <option value="teamselect">VOTE YOUR BEST PSG FIRST TEAM PLAYER</option>
+        <option value="neymar"> Neymar Junior</option>
+        <option value="mbappe"> Kylian mbappe</option>
+    </select>
+
+    <select id="juventusplayers" class="stadium" style="display:none">
+        <option value="teamselect">VOTE YOUR BEST JUVENTUS FIRST TEAM PLAYER</option>
+        <option value="pjanic"> miralem pjanic</option>
+        <option value="dybala">Pablo dybala</option>
+        <option value="higuain">Gonzalo higuan</option>
+    </select>
+
+    <select id="bayernmunichplayers" class="stadium" style="display:none">
+        <option value="teamselect">VOTE YOUR BEST BAVARIAN FIRST TEAM PLAYER</option>
+        <option value="lewandowski"> Robert lewandowski</option>
+        <option value="neuer">manuel neuer</option>
+        <option value="james">James Rodriguez</option>
+        the main djkd,xj,
+    </select>
+</body>
+
+</html>

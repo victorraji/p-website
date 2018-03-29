@@ -1,0 +1,27 @@
+#eplteams {
+    color: white;
+    background-color:darkmagenta;
+}
+#head{ background-color:darkslategrey;font-family:verdana
+}
+#liverpoolplayers {
+    color: white;background-color: tomato;font-family:inherit;text-align:center;size: 1000%;
+}
+#chelseaplayers {
+    color: white;
+    background-color: blue;
+}
+#arsenalplayers {
+    color: white;
+    background-color: red;
+    size: 100
+}
+body{background-color: rgb(212, 23, 23);
+}
+select{font-size: 36px;
+align-content: center;
+
+}
+p{
+display:inline;
+}
